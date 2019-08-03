@@ -31,20 +31,46 @@
             background-color: #ddd;
             color:red;
         }
-        .column{/*创建三个列元素：向左浮动；宽度百分比*/
+        .column1{/*创建三个列元素：向左浮动；宽度百分比*/
             float: left;
             width: 33.33%;
         }
-        .row:after{/*列内容之后清除浮动*/
+        .row1:after{/*列内容之后清除浮动*/
             content: "";
             display: table;
             clear: both;
         }
         /*响应式布局 窗口宽度小于600px时，列元素改为100%，上下布局*/
         @media screen and (max-width: 600px){
-            .column{
+            .column1{
                 width: 100%;
             }
+        }
+
+        .column2{/*不同大小的布局*/
+            float: left;
+            padding: 10px;
+        }
+        .column2.side{
+            width: 25%;
+        }
+        .column2.middle{
+            width: 50%;
+        }
+        .row2:after{/*列内容之后清除浮动*/
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px){
+            .column2.side, .column.middle{
+                width: 100%;
+            }
+        }
+        .fotter{/*底部样式：背景色；内边距；文本左右居中*/
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
@@ -60,19 +86,39 @@
     <a href="#">链接3</a>
 </div>
 
-<div class="row">
-    <div class="column">
-        <h2>第一列</h2>
+<div class="row1">
+    <div class="column1">
+        <h2>第一列(33.33%)</h2>
         <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
     </div>
-    <div class="column">
-        <h2>第二列</h2>
+    <div class="column1">
+        <h2>第二列(33.33%)</h2>
         <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
     </div>
-    <div class="column">
-        <h2>第三列</h2>
+    <div class="column1">
+        <h2>第三列(33.33%)</h2>
         <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
     </div>
+</div>
+<div class="row2">
+    <div class="column2 side">
+        <h2>第一列(25%)</h2>
+        <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+    </div>
+    <div class="column2 middle">
+        <h2>第二列(50%)</h2>
+        <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+        <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+        <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+    </div>
+    <div class="column2 side">
+        <h2>第三列(25%)</h2>
+        <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+    </div>
+</div>
+
+<div class="fotter">
+    <p>底部区域</p>
 </div>
 </body>
 </html>
